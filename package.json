@@ -1,0 +1,14 @@
+{
+  "name": "book-reader",
+  "version": "0.1.0",
+  "description": "Electron TXT book reader for local folders and GitHub repositories",
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}

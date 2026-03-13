@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Reader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar">
+        <div class="brand">Book Reader</div>
+        <div class="controls">
+          <button id="addLocalBtn" class="primary">Add Local Library</button>
+          <div class="github-add">
+            <input id="githubUrl" type="text" placeholder="GitHub repo URL" />
+            <button id="addGitHubBtn">Add GitHub</button>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section-title">Libraries</div>
+          <ul id="libraryList" class="list"></ul>
+        </div>
+        <div class="section">
+          <div class="section-title">Books</div>
+          <ul id="bookList" class="list"></ul>
+        </div>
+        <div class="section">
+          <div class="section-title">Parts</div>
+          <ul id="partList" class="list"></ul>
+        </div>
+        <div class="section">
+          <div class="section-title">Chapters</div>
+          <ul id="chapterList" class="list"></ul>
+        </div>
+      </aside>
+      <main id="reader">
+        <div class="reader-header">
+          <div id="readerTitle">Choose a library to begin</div>
+          <div class="reader-controls">
+            <button id="prevPartBtn">Prev Part</button>
+            <button id="prevPageBtn">Prev Page</button>
+            <span id="pageIndicator">Page 0 / 0</span>
+            <button id="nextPageBtn">Next Page</button>
+            <button id="nextPartBtn">Next Part</button>
+          </div>
+        </div>
+        <div id="readerViewport">
+          <div id="readerText" class="reader-text"></div>
+        </div>
+        <div id="statusBar"></div>
+      </main>
+    </div>
+    <div id="measure" class="reader-text measure"></div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
